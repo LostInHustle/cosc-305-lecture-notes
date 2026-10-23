@@ -676,14 +676,14 @@ This means the activity durations are treated as deterministic.
 Consider the following project.
 
 | Activity | Duration | Immediate Predecessor |
-|:---|---:|:---|
-| A | 7 weeks | None |
-| B | 9 weeks | None |
-| C | 12 weeks | A |
-| D | 8 weeks | A and B |
-| E | 9 weeks | D |
-| F | 6 weeks | C and E |
-| G | 5 weeks | E |
+| :------- | -------: | :-------------------- |
+| A        |  7 weeks | None                  |
+| B        |  9 weeks | None                  |
+| C        | 12 weeks | A                     |
+| D        |  8 weeks | A and B               |
+| E        |  9 weeks | D                     |
+| F        |  6 weeks | C and E               |
+| G        |  5 weeks | E                     |
 
 Activities A and B have no predecessors.
 
@@ -743,9 +743,9 @@ Activity A has no predecessor.
 
 Therefore:
 
-| Activity | ES | EF |
-|:---|---:|---:|
-| A | 0 | 7 |
+| Activity |  ES |  EF |
+| :------- | --: | --: |
+| A        |   0 |   7 |
 
 ---
 
@@ -759,9 +759,9 @@ Activity B has no predecessor.
 
 Therefore:
 
-| Activity | ES | EF |
-|:---|---:|---:|
-| B | 0 | 9 |
+| Activity |  ES |  EF |
+| :------- | --: | --: |
+| B        |   0 |   9 |
 
 ---
 
@@ -781,9 +781,9 @@ Activity C has a duration of 12 weeks.
 
 Therefore:
 
-| Activity | ES | EF |
-|:---|---:|---:|
-| C | 7 | 19 |
+| Activity |  ES |  EF |
+| :------- | --: | --: |
+| C        |   7 |  19 |
 
 ---
 
@@ -810,9 +810,9 @@ Activity D has a duration of 8 weeks.
 
 Therefore:
 
-| Activity | ES | EF |
-|:---|---:|---:|
-| D | 9 | 17 |
+| Activity |  ES |  EF |
+| :------- | --: | --: |
+| D        |   9 |  17 |
 
 ---
 
@@ -830,9 +830,9 @@ Activity E has a duration of 9 weeks.
 
 Therefore:
 
-| Activity | ES | EF |
-|:---|---:|---:|
-| E | 17 | 26 |
+| Activity |  ES |  EF |
+| :------- | --: | --: |
+| E        |  17 |  26 |
 
 ---
 
@@ -859,9 +859,9 @@ Activity F has a duration of 6 weeks.
 
 Therefore:
 
-| Activity | ES | EF |
-|:---|---:|---:|
-| F | 26 | 32 |
+| Activity |  ES |  EF |
+| :------- | --: | --: |
+| F        |  26 |  32 |
 
 ---
 
@@ -879,9 +879,9 @@ Activity G has a duration of 5 weeks.
 
 Therefore:
 
-| Activity | ES | EF |
-|:---|---:|---:|
-| G | 26 | 31 |
+| Activity |  ES |  EF |
+| :------- | --: | --: |
+| G        |  26 |  31 |
 
 ---
 
@@ -911,15 +911,15 @@ The earliest possible project completion time is 32 weeks.
 
 # 19. Forward Pass Results
 
-| Activity | Duration | ES | EF |
-|:---|---:|---:|---:|
-| A | 7 | 0 | 7 |
-| B | 9 | 0 | 9 |
-| C | 12 | 7 | 19 |
-| D | 8 | 9 | 17 |
-| E | 9 | 17 | 26 |
-| F | 6 | 26 | 32 |
-| G | 5 | 26 | 31 |
+| Activity | Duration |  ES |  EF |
+| :------- | -------: | --: | --: |
+| A        |        7 |   0 |   7 |
+| B        |        9 |   0 |   9 |
+| C        |       12 |   7 |  19 |
+| D        |        8 |   9 |  17 |
+| E        |        9 |  17 |  26 |
+| F        |        6 |  26 |  32 |
+| G        |        5 |  26 |  31 |
 
 ---
 
@@ -971,10 +971,10 @@ The project completion time is 32 weeks.
 
 Therefore:
 
-| Activity | LS | LF |
-|:---|---:|---:|
-| F | 26 | 32 |
-| G | 27 | 32 |
+| Activity |  LS |  LF |
+| :------- | --: | --: |
+| F        |  26 |  32 |
+| G        |  27 |  32 |
 
 Activity G finishes as early as week 31 but may finish as late as week 32 without delaying the project.
 
@@ -1006,9 +1006,9 @@ Activity E has a duration of 9 weeks.
 
 Therefore:
 
-| Activity | LS | LF |
-|:---|---:|---:|
-| E | 17 | 26 |
+| Activity |  LS |  LF |
+| :------- | --: | --: |
+| E        |  17 |  26 |
 
 ---
 
@@ -1026,9 +1026,9 @@ Activity D has a duration of 8 weeks.
 
 Therefore:
 
-| Activity | LS | LF |
-|:---|---:|---:|
-| D | 9 | 17 |
+| Activity |  LS |  LF |
+| :------- | --: | --: |
+| D        |   9 |  17 |
 
 ---
 
@@ -1046,9 +1046,9 @@ Activity C has a duration of 12 weeks.
 
 Therefore:
 
-| Activity | LS | LF |
-|:---|---:|---:|
-| C | 14 | 26 |
+| Activity |  LS |  LF |
+| :------- | --: | --: |
+| C        |  14 |  26 |
 
 ---
 
@@ -1078,9 +1078,9 @@ Activity A has a duration of 7 weeks.
 
 Therefore:
 
-| Activity | LS | LF |
-|:---|---:|---:|
-| A | 2 | 9 |
+| Activity |  LS |  LF |
+| :------- | --: | --: |
+| A        |   2 |   9 |
 
 ---
 
@@ -1098,23 +1098,23 @@ Activity B has a duration of 9 weeks.
 
 Therefore:
 
-| Activity | LS | LF |
-|:---|---:|---:|
-| B | 0 | 9 |
+| Activity |  LS |  LF |
+| :------- | --: | --: |
+| B        |   0 |   9 |
 
 ---
 
 # 21. Complete CPM Results
 
-| Activity | Duration | ES | EF | LS | LF | Slack |
-|:---|---:|---:|---:|---:|---:|---:|
-| A | 7 | 0 | 7 | 2 | 9 | 2 |
-| B | 9 | 0 | 9 | 0 | 9 | 0 |
-| C | 12 | 7 | 19 | 14 | 26 | 7 |
-| D | 8 | 9 | 17 | 9 | 17 | 0 |
-| E | 9 | 17 | 26 | 17 | 26 | 0 |
-| F | 6 | 26 | 32 | 26 | 32 | 0 |
-| G | 5 | 26 | 31 | 27 | 32 | 1 |
+| Activity | Duration |  ES |  EF |  LS |  LF | Slack |
+| :------- | -------: | --: | --: | --: | --: | ----: |
+| A        |        7 |   0 |   7 |   2 |   9 |     2 |
+| B        |        9 |   0 |   9 |   0 |   9 |     0 |
+| C        |       12 |   7 |  19 |  14 |  26 |     7 |
+| D        |        8 |   9 |  17 |   9 |  17 |     0 |
+| E        |        9 |  17 |  26 |  17 |  26 |     0 |
+| F        |        6 |  26 |  32 |  26 |  32 |     0 |
+| G        |        5 |  26 |  31 |  27 |  32 |     1 |
 
 ---
 
